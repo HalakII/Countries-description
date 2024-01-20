@@ -1,13 +1,13 @@
-import {
-  CountryWrapper,
-  CountryDescription,
-  Flag,
-  Image,
-  CountryTitle,
-  CountryCapital,
-  CountryDetail,
-  Accent,
-} from './CountryInfo.styled';
+// import {
+//   CountryWrapper,
+//   CountryDescription,
+//   Flag,
+//   Image,
+//   CountryTitle,
+//   CountryCapital,
+//   CountryDetail,
+//   Accent,
+// } from './CountryInfo.styled';
 
 export const CountryInfo = ({
   flag,
