@@ -1,6 +1,11 @@
 import { Header } from 'components';
 import { CountrySearch, Home, Country } from 'pages';
+import { Route, Routes } from 'react-router-dom';
 
 export const App = () => {
-  return <h2>App</h2>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 };
