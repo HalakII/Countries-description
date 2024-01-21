@@ -14,7 +14,9 @@ export const CountryList = ({ countries }) => {
                 src={country === 'Russia' ? defaultMovieImg : flag}
                 alt={country}
               />
-              <p>{country === 'Russia' ? 'terrorist country' : country}</p>
+              <p style={{ color: 'white', textAlign: 'center' }}>
+                {country === 'Russia' ? 'terrorist country' : country}
+              </p>
             </Link>
           </GridItem>
         );

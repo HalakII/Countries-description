@@ -21,7 +21,6 @@ export const Country = () => {
     setLoading(true);
     fetchCountry(countryId)
       .then(data => {
-        console.log(data);
         setCountryInfo(data);
       })
       .catch(error => {
