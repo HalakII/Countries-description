@@ -9,6 +9,7 @@ export const CountryWrapper = styled.div`
 
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50px;
 `;
 
 export const CountryDescription = styled.div`
@@ -33,7 +34,7 @@ export const Flag = styled.div`
 
   position: absolute;
   left: -10%;
-  top: -13%;
+  top: -5%;
   display: flex;
   align-items: center;
   justify-content: center;

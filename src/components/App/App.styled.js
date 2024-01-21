@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
 
 export const Section = styled.section`
   padding-top: ${props => props.theme.spacing.step * 5}px;
@@ -99,5 +100,22 @@ export const GridItem = styled.li`
   &:focus {
     transform: scale(1.05);
     box-shadow: 0px 2px 10px 2px ${props => props.theme.colors.primary};
+  }
+`;
+export const LinkBtn = styled(Link)`
+  color: ${({ theme }) => theme.colors.white};
+
+  letter-spacing: 0.06em;
+  // border: 1px solid ${({ theme }) => theme.colors.light};
+  border-radius: ${({ theme }) => theme.spacing.step * 1}px;
+  margin-bottom: ${({ theme }) => theme.spacing.step * 15}px;
+  margin-left: auto;
+  padding: ${({ theme }) => theme.spacing.step * 1.5}px
+    ${({ theme }) => theme.spacing.step * 2.5}px;
+  transition: background-color ${({ theme }) => theme.animations.cubicBezier};
+
+  &:hover,
+  &:focus {
+    background-color: ${props => props.theme.colors.accent};
   }
 `;
