@@ -5,27 +5,25 @@ import { getCountries } from 'service/country-service';
 export const Home = () => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   useEffect(() => {
-    const fetchCountriesList = () => {
-      setLoading(true);
-      getCountries()
-        .then(countriesList => {
-          setCountries(countriesList);
-        })
-        .catch(error => {
-          console.log(error);
-        })
-        .finally(() => {
-          setLoading(false);
-        });
-    };
-    fetchCountriesList();
+    setLoading(true);
+    getCountries()
+      .then(data => {
+        setCountries(data);
+      })
+      .catch(error => {
+        setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
     <Section>
       <Container>
-        <Heading>Countries</Heading>
+        {error && <Heading>{error}</Heading>}
         <CountryList countries={countries} />
         {loading && <Loader />}
       </Container>

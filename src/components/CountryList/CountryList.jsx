@@ -1,4 +1,5 @@
 import { Grid, GridItem } from 'components';
+import { Link } from 'react-router-dom';
 
 export const CountryList = ({ countries }) => {
   const defaultMovieImg =
@@ -8,11 +9,13 @@ export const CountryList = ({ countries }) => {
       {countries.map(({ id, flag, country }) => {
         return (
           <GridItem key={id}>
-            <img
-              src={country === 'Russia' ? defaultMovieImg : flag}
-              alt={country}
-            />
-            <p>{country === 'Russia' ? 'terrorist country' : country}</p>
+            <Link to={`/country/${id}`}>
+              <img
+                src={country === 'Russia' ? defaultMovieImg : flag}
+                alt={country}
+              />
+              <p>{country === 'Russia' ? 'terrorist country' : country}</p>
+            </Link>
           </GridItem>
         );
       })}
