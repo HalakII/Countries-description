@@ -1,7 +1,8 @@
 import { Grid, GridItem } from 'components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const CountryList = ({ countries }) => {
+  const location = useLocation();
   const defaultMovieImg =
     'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
   return (
@@ -9,7 +10,7 @@ export const CountryList = ({ countries }) => {
       {countries.map(({ id, flag, country }) => {
         return (
           <GridItem key={id}>
-            <Link to={`/country/${id}`}>
+            <Link to={`/country/${id}`} state={{ from: location }}>
               <img
                 src={country === 'Russia' ? defaultMovieImg : flag}
                 alt={country}
