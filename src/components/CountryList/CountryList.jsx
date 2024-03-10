@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 export const CountryList = ({ countries }) => {
   const location = useLocation();
   const defaultMovieImg =
-    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+    'https://i1.sndcdn.com/artworks-vWfRJMCOvicc6r6d-IzXL8A-t500x500.jpg';
   return (
     <Grid>
       {countries.map(({ id, flag, country }) => {

@@ -4,9 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const NavBar = styled.header`
   display: flex;
   align-items: center;
-
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 30px 20px 0;
   background-color: ${props => props.theme.colors.mainBackground};
 
   box-shadow: 0px 2px 10px 1px ${props => props.theme.colors.dark};

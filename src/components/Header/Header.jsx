@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
+import { Theme } from 'components';
 
 import { Container } from 'components/App/App.styled';
 import { FaFlagUsa } from 'react-icons/fa';
@@ -27,6 +28,7 @@ export const Header = () => {
             </LinkWrapper>
           </HeaderWrapper>
         </Container>
+        <Theme />
       </NavBar>
 
       <Outlet />
