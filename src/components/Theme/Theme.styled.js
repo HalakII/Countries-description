@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import sun from '../../image/flag.png';
-import moon from '../../image/night.png';
+import flag from '../../image/flag.png';
 import clouds from '../../image/cloudy.png';
+import star from '../../image/star.png';
 
 export const SwitcherBox = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ export const SwitcherWrapp = styled.label`
     right: 0;
 
     border-radius: 30px;
-    background-color: #d8f5ff;
+    background-color: #4db8e5;
     background-image: url(${clouds});
     background-size: 17px;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@ export const SwitcherWrapp = styled.label`
 
     height: 24px;
     width: 24px;
-    background-image: url(${sun});
+    background-image: url(${flag});
     background-size: cover;
     border-radius: 50%;
     cursor: pointer;
@@ -63,12 +63,21 @@ export const SwitcherWrapp = styled.label`
       background-image 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .switcher:checked + .switcher-slider::before {
-    transform: translateX(25px) rotate(346deg);
-    background-image: url(${moon});
+    transform: translateX(25px) rotate(360deg);
+    background-image: url(${flag});
     transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1),
       background-image 350ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .switcher:checked + .switcher-slider {
-    background-color: #2f4e90;
+    background-color: #2c5364;
+    background-image: url(${star});
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: 2px;
+    cursor: pointer;
+    transition: background-image 350ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-position 350ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-size 350ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 450ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 `;

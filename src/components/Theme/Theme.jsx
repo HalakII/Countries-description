@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SwitcherWrapp, SwitcherBox } from './Theme.syled';
+import { SwitcherWrapp, SwitcherBox } from './Theme.styled';
 
 export const Theme = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
